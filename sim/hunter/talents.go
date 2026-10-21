@@ -583,7 +583,7 @@ func (hunter *Hunter) applyLockAndLoad() {
 			aura.Activate(sim)
 		},
 		OnPeriodicDamageDealt: func(aura *core.Aura, sim *core.Simulation, spell *core.Spell, result *core.SpellResult) {
-			if spell != hunter.BlackArrow && spell != hunter.ExplosiveTrap {
+			if spell != hunter.BlackArrow && !hunter.isExplosiveTrap(spell) {
 				return
 			}
 
