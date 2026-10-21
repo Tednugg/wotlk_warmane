@@ -541,7 +541,7 @@ func (hunter *Hunter) applyLockAndLoad() {
 	}
 
 	actionID := core.ActionID{SpellID: 56344}
-	procChance := []float64{0, 0.02, 0.04, 0.20}[hunter.Talents.LockAndLoad]
+	procChance := []float64{0, 0.02, 0.04, 0.06}[hunter.Talents.LockAndLoad]
 
 	icd := core.Cooldown{
 		Timer:    hunter.NewTimer(),
